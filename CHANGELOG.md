@@ -1,18 +1,33 @@
-# Novità
+# Changelog
 
-## 1.1.0 — 16 novembre 2026
+## 1.2.0 — 2026-11-16
 
-- **Tasto destro → Elimina** nell'editor per segnaposti di ogni tipo, formule
-  inline/display, figure generate, immagini importate, NDR e singoli riferimenti.
-- Quando un elemento ha riferimenti nel testo, il comando mostra quanti ne
-  rimuoverà insieme. Le altre figure e i loro riferimenti restano validi; la
-  numerazione viene aggiornata.
-- Il salvataggio aggiorna HTML, Markdown, metadati e handoff LaTeX. Le eliminazioni
-  persistono dopo la riapertura e nell'importazione dei progetti JSON esportati.
-- La revisione precedente e gli asset originali vengono conservati. Il controllo
-  strutturale continua a rifiutare figure incoerenti e riferimenti senza destinazione.
-- Il wizard per Windows, macOS e Linux include questa versione dell'editor.
+- English throughout the installation wizard, desktop lesson/transcription
+  interfaces, editor, figure comparison, CLI help, errors, progress, and demo.
+- English operational prompts, generated compilation instructions, public
+  guides, and template documentation. Newly generated reports and assistant
+  status messages are requested in English.
+- English launcher names: `Install-Windows.bat`, `Start-Windows.bat`,
+  `Install-macOS.command`, and `Start-macOS.command`. Terminal confirmations
+  now use y/N, including the corresponding acceptance logic.
+- English guide filenames: `QUICKSTART.md`, `INSTALLATION.md`, and the shared
+  template's `README.md`. The organization prompt is
+  `PROMPT_LECTURE_ORGANIZATION.md`; exports create `README-compilation.md`.
+- Source language codes, project formats, element IDs, and multilingual
+  source-filename recognition remain compatible. Existing user lessons,
+  transcripts, recordings, notes, and archived output are preserved.
 
-Dopo l'aggiornamento riapri la lezione dall'app per avviare un editor aggiornato.
-Se rimane aperto un server precedente, la rimozione resta disattivata finché non
-si riapre la lezione.
+## 1.1.0 — 2026-11-16
+
+- Right-click **Delete** for every placeholder type, inline/display formulas,
+  generated figures, imported images, editorial notes, and references.
+- The command shows how many linked references will be removed with a target.
+  Other figures and references remain valid, and numbering updates.
+- Saving synchronizes HTML, Markdown, figure metadata, and the LaTeX handoff.
+  Deletions persist after reopening and through exported JSON project import.
+- Previous revisions and original assets are retained. Structural validation
+  still rejects inconsistent figure slots and dangling references.
+- The Windows/macOS/Linux installer includes the updated editor.
+
+After updating, reopen the lesson from the app. An older running editor server
+must be replaced before it can save structured deletions.

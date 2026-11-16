@@ -1,9 +1,9 @@
 # Whisper Studio · Installation Wizard
 
-A guided installer for **Windows, macOS, and Linux**. Set up Whisper Studio,
-choose between local speech recognition and an existing transcript, and configure
-Codex CLI, Claude Code, or Gemini CLI. An interactive demo with a sample file is
-included.
+A guided installer for **Windows, macOS, and Linux**. Choose local Whisper
+transcription or import an existing transcript, then connect **Codex CLI,
+Claude Code, or Gemini CLI**. The wizard explains each assistant's role and
+includes an interactive demonstration with a sample lesson.
 
 **[Download the wizard](https://github.com/LorenzoRusso-eng/whisper-studio-wizard/releases/latest/download/Whisper-Studio-Installer.zip)**
 
@@ -14,51 +14,62 @@ included.
 
 | Operating system | Launcher |
 | --- | --- |
-| Windows | `Installa-Windows.bat` |
-| macOS | `Installa-macOS.command` or `sh launch.sh setup` |
+| Windows | `Install-Windows.bat` |
+| macOS | `Install-macOS.command` or `sh launch.sh setup` |
 | Linux | `sh install-linux.sh` |
 
-3. Choose local Whisper transcription or provide a transcript you have already
-   created. Importing an external transcript skips both audio processing passes.
-4. Select an AI assistant and sign in with your own account. The wizard explains
-   how the CLIs are used, installs missing dependencies, and offers a guided demo.
+3. First choose **local Whisper** or **an existing transcript**. Importing a
+   TXT, Markdown, SRT, or supported JSON transcript skips both audio passes
+   and installs only the dependencies needed for the text workflow.
+4. Choose one AI assistant, complete installation, and sign in with your own
+   account. The app uses the CLI to organize lessons, reconstruct figures,
+   and prepare LaTeX/PDF after your edits.
+5. Run the guided demo. The local version uses the included prepared result.
+   The optional live version sends the sample text to your selected provider
+   after you confirm it in the demo.
 
-You need **64-bit Python 3.11–3.13** with Tcl/Tk, pip, and venv. The launchers help
-install these prerequisites. Materials selected for AI organization are processed
-online by your chosen provider, using your account and its usage allowance.
-Instructions for installing TeX are available if you want to generate a PDF.
+All application interfaces, guides, launchers, operational prompts, and
+generated application messages are in **English**. Source transcripts can
+use other supported languages; source language codes are preserved.
 
-The wizard interface and the linked guides are currently in Italian.
+You need **64-bit Python 3.11–3.13** with Tcl/Tk, pip, and venv. The launchers
+help install these prerequisites. Selected materials are processed online
+by your chosen AI provider, using your account and its usage allowance.
+TeX and a supported browser are additional requirements for final PDF output.
 
-## What's new in version 1.1.0
+## Version 1.2.0
 
-In the editor, **right-click an element → Elimina (Delete)** to remove
-placeholders, formulas, figures/images, editorial notes (NDR), or references.
-The menu shows how many linked references will be removed with the element.
-Saving and numbering update accordingly. Reopen the lesson from the app after
-updating.
+- English throughout the wizard, desktop interfaces, HTML editor, figure
+  comparison, demo, CLI messages, guides, and LaTeX workflow.
+- English launcher and guide filenames, with working **y/N** confirmations.
+- Right-click **Delete** for placeholders, formulas, figures/images, editorial
+  notes, and references. Linked-reference counts, numbering, and saved projects
+  remain consistent after deletion.
+
+When updating, extract the new package into its own folder and reopen the
+lesson from the updated app. The package preserves compatibility with existing
+project formats and source language codes.
 
 ## Repository contents
 
-This repository contains **the installer package and public guides**. The ZIP
-includes the application components needed to install and use the system.
+This repository distributes **the installer ZIP and public guides**. The ZIP
+contains the application components needed to install and use the system,
+an example lesson, a file-hash manifest, and bundled third-party licenses.
 Personal recordings, lecture notes, work projects, generated output, Python
 environments, downloaded models, settings, and credentials are excluded.
 
-The ZIP contains launchers for all three operating systems and a manifest with
-file hashes. Licenses for bundled third-party assets are included in the package.
-
-- [Quick start and requirements (Italian)](INIZIA-QUI.md)
-- [Installation and CLI details (Italian)](INSTALLAZIONE.md)
-- [Changelog (Italian)](CHANGELOG.md)
+- [Quick start and requirements](QUICKSTART.md)
+- [Installation and CLI details](INSTALLATION.md)
+- [Changelog](CHANGELOG.md)
 - [ZIP in this repository](Whisper-Studio-Installer.zip)
 - [SHA-256 checksum](Whisper-Studio-Installer.zip.sha256)
 
 ## Validation status
 
-Native testing has been performed on Windows. Launchers and binary dependency
-resolution have also been checked for Intel Macs, Apple Silicon, and Linux x64;
-native testing on those platforms remains pending.
+Native testing has been performed on Windows, including the English wizard
+and real browser editing, saving, and deletion workflows. Launchers and binary
+dependency resolution have also been checked for Intel Macs, Apple Silicon,
+and Linux x64; native testing on those platforms remains pending.
 
 Codex has been tested with a live demo. Claude and Gemini have local integration
 tests; end-to-end verification with their respective accounts remains pending.
