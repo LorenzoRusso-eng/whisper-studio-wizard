@@ -1,55 +1,64 @@
-# Whisper Studio · Wizard di installazione
+# Whisper Studio · Installation Wizard
 
-Wizard per **Windows, macOS e Linux**. Installa Whisper Studio, guida alla
-scelta fra trascrizione locale ed esterna e configura Codex CLI, Claude Code
-oppure Gemini CLI. Include una demo con un file di esempio.
+A guided installer for **Windows, macOS, and Linux**. Set up Whisper Studio,
+choose between local speech recognition and an existing transcript, and configure
+Codex CLI, Claude Code, or Gemini CLI. An interactive demo with a sample file is
+included.
 
-**[Scarica il wizard](https://github.com/LorenzoRusso-eng/whisper-studio-wizard/releases/latest/download/Whisper-Studio-Installer.zip)**
+**[Download the wizard](https://github.com/LorenzoRusso-eng/whisper-studio-wizard/releases/latest/download/Whisper-Studio-Installer.zip)**
 
-## Installazione
+## Installation
 
-1. Scarica lo ZIP ed estrailo completamente in una cartella locale scrivibile.
-2. Apri il launcher del tuo sistema:
+1. Download the ZIP and extract it completely into a writable local folder.
+2. Run the launcher for your operating system:
 
-| Sistema | Launcher |
+| Operating system | Launcher |
 | --- | --- |
 | Windows | `Installa-Windows.bat` |
-| macOS | `Installa-macOS.command` oppure `sh launch.sh setup` |
+| macOS | `Installa-macOS.command` or `sh launch.sh setup` |
 | Linux | `sh install-linux.sh` |
 
-3. Scegli Whisper locale oppure fornisci una trascrizione già pronta. Con una
-   trascrizione esterna entrambi i passaggi audio sono saltati.
-4. Scegli un assistente AI e completa l'accesso con il tuo account. Il wizard
-   spiega il ruolo delle CLI, installa le dipendenze mancanti e propone la demo.
+3. Choose local Whisper transcription or provide a transcript you have already
+   created. Importing an external transcript skips both audio processing passes.
+4. Select an AI assistant and sign in with your own account. The wizard explains
+   how the CLIs are used, installs missing dependencies, and offers a guided demo.
 
-Serve Python 3.11–3.13 a 64 bit con Tcl/Tk, pip e venv; i launcher aiutano a
-installare i prerequisiti. I materiali selezionati per l'organizzazione AI vengono
-elaborati online dal fornitore scelto, secondo il tuo account e la tua quota.
-Per il PDF finale sono disponibili le indicazioni per installare anche TeX.
+You need **64-bit Python 3.11–3.13** with Tcl/Tk, pip, and venv. The launchers help
+install these prerequisites. Materials selected for AI organization are processed
+online by your chosen provider, using your account and its usage allowance.
+Instructions for installing TeX are available if you want to generate a PDF.
 
-## Novità della versione 1.1.0
+The wizard interface and the linked guides are currently in Italian.
 
-Nell'editor usa **tasto destro sull'elemento → Elimina** per rimuovere segnaposti,
-formule, figure/immagini, NDR e riferimenti. Il menu indica quanti riferimenti
-verranno rimossi insieme; il salvataggio e la numerazione si aggiornano.
-Riapri la lezione dall'app dopo l'aggiornamento.
+## What's new in version 1.1.0
 
-## Contenuto della repository
+In the editor, **right-click an element → Elimina (Delete)** to remove
+placeholders, formulas, figures/images, editorial notes (NDR), or references.
+The menu shows how many linked references will be removed with the element.
+Saving and numbering update accordingly. Reopen the lesson from the app after
+updating.
 
-Questa repository contiene **solo il pacchetto del wizard e le guide pubbliche**.
-Lo ZIP include i componenti applicativi necessari a installare e usare il sistema.
-Non include registrazioni, lezioni personali, progetti di lavoro, output,
-ambienti Python, modelli scaricati, configurazioni o credenziali.
-Lo ZIP contiene un manifest con gli hash dei file e i launcher dei tre sistemi.
-Le licenze degli asset di terzi distribuiti sono conservate nel pacchetto.
+## Repository contents
 
-- [Guida rapida e requisiti](INIZIA-QUI.md)
-- [Installazione e CLI](INSTALLAZIONE.md)
-- [Novità](CHANGELOG.md)
-- [ZIP nella repository](Whisper-Studio-Installer.zip)
-- [Checksum SHA-256](Whisper-Studio-Installer.zip.sha256)
+This repository contains **the installer package and public guides**. The ZIP
+includes the application components needed to install and use the system.
+Personal recordings, lecture notes, work projects, generated output, Python
+environments, downloaded models, settings, and credentials are excluded.
 
-Il collaudo nativo è eseguito su Windows. Per Mac Intel, Apple Silicon e Linux x64
-sono stati verificati i launcher e la risoluzione delle dipendenze, senza
-equivalerli a un collaudo nativo. Codex è stato provato con una demo reale;
-Claude e Gemini richiedono la verifica con i rispettivi account.
+The ZIP contains launchers for all three operating systems and a manifest with
+file hashes. Licenses for bundled third-party assets are included in the package.
+
+- [Quick start and requirements (Italian)](INIZIA-QUI.md)
+- [Installation and CLI details (Italian)](INSTALLAZIONE.md)
+- [Changelog (Italian)](CHANGELOG.md)
+- [ZIP in this repository](Whisper-Studio-Installer.zip)
+- [SHA-256 checksum](Whisper-Studio-Installer.zip.sha256)
+
+## Validation status
+
+Native testing has been performed on Windows. Launchers and binary dependency
+resolution have also been checked for Intel Macs, Apple Silicon, and Linux x64;
+native testing on those platforms remains pending.
+
+Codex has been tested with a live demo. Claude and Gemini have local integration
+tests; end-to-end verification with their respective accounts remains pending.
